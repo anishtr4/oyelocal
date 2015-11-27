@@ -61,7 +61,9 @@
   
   <div class="tabs-animated-wrap">
     <div class="tabs">
-      <div id="tab1" class="page-content tab active" onclick="stwaaer()">
+      <div id="tab1" class="page-content tab active" >
+      
+      <img src="emoji/twit.png" width="20%" onclick="changeimage1()">
       
       </div>
       <div id="tab2" class="page-content tab">
@@ -111,7 +113,11 @@
   {
    window.plugins.socialsharing.share(null, null, 'www/emoji/my.svg', null);
   }
-  changeimage();
+  var changeimage1 = function ()
+  {
+   window.plugins.socialsharing.share(null, null, 'www/emoji/twit.png', null);
+  }
+  
 
   </script>
   </body>
