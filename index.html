@@ -121,12 +121,12 @@ var myApp = new Framework7();
 
  var changeimage = function (_src)
   {
-	 alert(_src);
-	  var url = _src.substring(_src.indexOf("emoji"));
-	  var joiner = 'www/' + url
-	  
-	   alert(joiner);
-   window.plugins.socialsharing.shareViaWhatsApp(null, null, ''+joiner+'', null);
+	 //var src = $('img').attr('src'); // "static/images/banner/blue.jpg"
+var tarr = _src.split('/');      // ["static","images","banner","blue.jpg"]
+var file = tarr[tarr.length-1];
+
+	   alert(file);
+   window.plugins.socialsharing.shareViaWhatsApp(null, null, 'www/emoji/'+tarr+'', null);
   }
   var changeimage1 = function ()
   {
