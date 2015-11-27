@@ -19,7 +19,7 @@
 	}
 	</style>
   </head>
-  <body class="layout-dark theme-purple">
+  <body class="layout-light theme-purple">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
@@ -45,7 +45,7 @@
         <div data-page="index" class="page page-on-center">
             <div class="navbar">
               <div class="navbar-inner">
-                <div class="center">Framework7</div>
+                <div class="center">OyeLocal</div>
                 <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
               </div>
             </div>
@@ -62,8 +62,19 @@
   <div class="tabs-animated-wrap">
     <div class="tabs">
       <div id="tab1" class="page-content tab active" >
+      <div class="row">
+<div class="col-50"><img src="emoji/1.png" onclick="changeimage(this.src)"></div>
+<div class="col-50"><img src="emoji/2.png" onclick="changeimage(this.src)"></div>
+
+</div>
       
-      <img src="emoji/twit.png" width="20%" onclick="changeimage1()">
+          <div class="row">
+<div class="col-50"><img src="emoji/3.png" onclick="changeimage(this.src)"></div>
+<div class="col-50"><img src="emoji/4.png" onclick="changeimage1(this.src)"></div>
+
+</div>
+      
+   
       
   
       <a href="#" class="ac-1">One group, three buttons</a>
@@ -101,10 +112,6 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <script type="text/javascript" src="js/kitchen-sink.js"></script>
-    <script src="js/Wallpaper.js"></script>
-    <!-- Path to your app js-->
-    
-    <script src="js/trianglify.min.js"></script>
     <script src="js/jquery-2.1.4.js"></script>
 
 
@@ -112,9 +119,10 @@
 
 var myApp = new Framework7();
 
- var changeimage = function ()
+ var changeimage = function (_src)
   {
-   window.plugins.socialsharing.share(null, null, 'www/emoji/my.svg', null);
+	  alert(_src);
+   window.plugins.socialsharing.shareViaWhatsApp(null, null, _src, null);
   }
   var changeimage1 = function ()
   {
