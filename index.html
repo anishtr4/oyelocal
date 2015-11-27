@@ -122,6 +122,10 @@ var myApp = new Framework7();
  var changeimage = function (_src)
   {
 	  alert(_src);
+	  var url = _src.substring(_src.indexOf("emoji"));
+	  var joiner = 'www/' + url
+	  
+	   alert(joiner);
    window.plugins.socialsharing.shareViaWhatsApp(null, null, _src, null);
   }
   var changeimage1 = function ()
